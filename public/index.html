@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" contact="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Corben:wght@400;700&family=Luxurious+Roman&family=Luxurious+Script&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:wght@400;700&family=Ultra&display=swap" rel="stylesheet">
+    <title>portfolio</title>
+</head>
+
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+    body{
+        background-color: #1d1d20;
+        color: #d1d1d1;
+        font-family: "Corben", serif;
+  font-weight: 400;
+  padding: 20px 50px;
+    }
+
+    .wrapper{
+        display: grid;
+        margin: 0 auto;
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.7fr
+        5fr
+        7fr
+        5fr;
+        grid-template-areas: "header"
+        "about"
+        "projects"
+        "contact";
+    }
+
+    .header{
+    grid-area: header;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.5rem;
+    justify-content: space-between;
+    font-family: "Ultra", serif;
+    font-weight: 400;
+}
+h2{
+    font-family: "Ultra", serif;
+    font-weight: 400;
+}
+
+.header > div {
+    display: inline-flex;
+    font-size: 1.3rem;
+    width: 300px;
+    justify-content: space-between;
+    font-family: "Corben", serif;
+    font-weight: 400;
+}
+.about{
+    grid-area: about;
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    padding: 20px 75px;
+    margin: 70px 0;
+    flex-direction: column;
+}
+
+.projects{
+    grid-area: projects;
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    padding: 20px 75px;
+    /* margin-top: 100px; */
+    flex-direction: column;
+    margin: 100px 0;
+}
+
+.card{
+    background-color: #31316740;
+    border-radius: 14px;
+    height: 500px;
+    padding: 20px 20px;
+    max-width: 340px;
+    font-weight: 100;
+    font-size: 1rem;
+    box-shadow:  0px 0px 20px 20px rgb(38 120 171 / 24%), 0px 5px 5px 6px rgb(38 53 78 / 26%), inset 4px 4px 8px 20px rgb(29 50 60 / 38%), inset -4px -4px 8px 0px rgb(30 45 68 / 25%);
+    display: block;
+  margin: 40px auto;
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+
+.card > p {
+    margin-bottom: 20px;
+}
+
+.SECcard{
+    background-color: #31316740;
+    border-radius: 14px;
+    height: 590px;
+    padding: 30px 20px;
+    max-width: 340px;
+    font-weight: 100;
+    font-size: 1rem;
+    box-shadow:  0px 0px 20px 20px rgb(38 120 171 / 24%), 0px 5px 5px 6px rgb(38 53 78 / 26%), inset 4px 4px 8px 20px rgb(29 50 60 / 38%), inset -4px -4px 8px 0px rgb(30 45 68 / 25%);
+    display: block;
+  /* margin: 40px auto; */
+  transition: box-shadow 0.1s, transform 0.1s;
+}
+
+    /*-- Sign Styles --*/
+
+.sign {
+  /* min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; */
+  
+  span {
+      font-weight: 400;
+      font-size: 2.5rem;
+      text-align: center;
+    line-height: 1;
+    color:  #313167;;
+    animation: neon .08s ease-in-out infinite alternate;
+    margin-bottom: 10px;
+}
+
+}
+
+/*-- Animation Keyframes --*/
+
+/* // animation */
+
+@keyframes neon {
+  from {
+    text-shadow:
+    /* 0 0 6px rgba(202,228,225,0.92), */
+    0 0 30px rgba(202,228,225,0.34),
+    0 0 12px rgba(30,132,242,0.52),
+    0 0 21px rgba(30,132,242,0.92),
+    0 0 34px rgba(30,132,242,0.78),
+    0 0 54px rgba(30,132,242,0.92);
+  }
+  to {
+    text-shadow:
+    /* 0 0 6px rgba(202,228,225,0.98), */
+    0 0 30px rgba(202,228,225,0.42),
+    0 0 12px rgba(30,132,242,0.58),
+    0 0 22px rgba(30,132,242,0.84),
+    0 0 38px rgba(30,132,242,0.88),
+    0 0 60px rgba(30,132,242,1);
+  }
+}
+
+.card:hover {
+  /* box-shadow: 0px 0px 30px rgba(0,0,0, 0.6); */
+  /* cursor: pointer; */
+}
+
+.card > a > img{
+    margin: 20px 0;
+}
+.card > span > a{
+    text-decoration: underline;
+}
+a{
+    font-family: sans-serif;
+}
+.contact{
+    grid-area: contact;
+    display: inline-flex;
+    align-items: flex-start;
+    font-size: 1.5rem;
+    padding: 20px 75px;
+    flex-direction: column;
+    margin-bottom: 100px;
+}
+
+.footer{
+    margin: 100px 0;
+    display: inline-flex;
+    align-items: center;
+    width: -webkit-fill-available;
+    justify-content: space-between;
+}
+
+#rsvp-form{
+    /* padding: 40px 10px; */
+}
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin-bottom:  0.65vw;
+            font-size: 1.3rem;
+            color: #d1d1d1;
+
+        }
+
+        input[type="text"],
+        input[type="email"]
+        {
+            padding: 0.65vw;
+    margin-bottom: 1.65vw;
+    border: 1px solid  #d1d1d1a4;
+    border-radius: 3px;
+    color:  #d1d1d1a4;
+    background-color: unset;
+        }
+
+        #rsvp {
+            padding: 0.65vw;
+    margin-bottom: 1.65vw;
+    border: 1px solid  #d1d1d1a4;
+    border-radius: 3px;
+    color:  #d1d1d1a4;
+    background-color: unset;
+        }
+
+
+
+        input[type="submit"] {
+            background-color:  #d1d1d1;
+            color: #313167;
+            padding: 0.65vw;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: calc(1.0vw + 8px)
+        }
+
+        input[type="submit"]:hover {
+            background-color:#31316774;
+            color:  #d1d1d1ae;
+
+        }
+</style>
+
+<body>
+    <div class="wrapper" id="app">
+        <div class="header bg-white">
+            
+
+            <h2 style="display: flex; align-items: center;"><img src="https://i.ibb.co/SXh7PJQ/7675dac33ce34dbf807b8355e8f00045-removebg-preview.png" alt="" style="padding: 0 10px; height:50px;opacity: 80%;"> Reham Aljaldi | Front-end developer</h2>
+
+            <div class="inline-flex w-80 size-5">
+                <button><a href="#about">About</a></button>
+                <button><a href="#projects">Projects</a></button>
+                <button><a href="#contact">Contact me</a></button>
+            </div>
+        </div>
+
+        <div class="about" id="about">
+            <h2 style="font-size: 3.2rem; margin-bottom: 15px;">Hello, I'm <span style="color: #313167;font-weight: 100;">Reham</span></h2>
+
+            <p style="    border:  #d1d1d1a1;
+            border-left-style: solid;
+            border-left-width: 2px;    padding-left: 10px;"> Aspiring Front-End Developer <br>  Multilingual speaker<br>  Passionate about creating user-friendly websites<br>  Scholarship Recipient at Meta for Frontend Development program</p>
+        </div>
+
+        <div class="projects" id="projects">
+
+            <h2 class="sign"><span>Projects</span></h2>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: center;     margin-top: 65px;"> 
+
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/HiLinky/profile.html"><img src="https://i.ibb.co/2NP5Cnd/Screenshot-2024-03-17-052806.png"></a>
+            <h1 style="font-weight: 700;">HiLinky</h1>
+            <p>hiliky is a digital busnisse card website Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure officiis iste quasi molestias eligendi tempore aspernatur blanditiis soluta quidem magni.</p>
+            <span><a href="https://github.com/rehamej/HiLinky">GitHub</a>
+            <a href="https://rehamej.github.io/HiLinky/profile.html">View</a></span>
+        </div> 
+
+        
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/magic_ball/"><img src="https://i.ibb.co/GQNYhBS/Screenshot-2024-03-17-052843.png"></a>
+            <h1 style="font-weight: 700;">Magic 8-Ball</h1>
+            <p>Crafted a fun, interactive Magic 8-Ball using JavaScript. Users ask a question, click the ball, and it delivers a mysterious response. 🌟</p>
+            <span><a href="https://github.com/rehamej/magic_ball">GitHub</a>
+            <a href="https://rehamej.github.io/magic_ball/">View</a></span>
+        </div>
+
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/Currency_converter/public/index.html"><img src="https://i.ibb.co/wC2jFPk/Screenshot-2024-03-17-052902.png"></a>
+            <h1 style="font-weight: 700;">Currency converter</h1>
+            <p> sleek and efficient currency converter built from scratch using HTML and CSS! 💱 <br> Seamlessly switch between currencies and stay on top of global exchange rates effortlessly. </p>
+            <span><a href="">GitHub</a>
+            <a href="https://rehamej.github.io/Currency_converter/public/index.html">View</a></span>
+        </div>
+
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/pizza-website/pizza.html"><img src="https://i.ibb.co/hVRSFTq/Screenshot-2024-03-17-052025.png"></a>
+            <h1 style="font-weight: 700;">Pizza restaurant</h1>
+            <p>This design is not only smart and practical, but it also creates a safe and user-friendly environment. <br> You'll love the dynamic feature that elegantly reveals the available restaurant locations simply by hovering over them.</p>
+            <span><a href="https://github.com/rehamej/Currency_converter">GitHub</a>
+            <a href="https://rehamej.github.io/pizza-website/pizza.html">View</a></span>
+        </div>
+        
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/pets-store/pet.store.html"><img src="https://i.ibb.co/XWPNNGp/Screenshot-2024-03-17-052142.png"></a>
+            <h1 style="font-weight: 700;">Purr-fect pets</h1>
+            <p>A vibrant online pet store built with love and code! 🐶🐱  <br>From fluffy companions to feathered friends, this store offers a paw-some selection of products for every pet parent. Dive in, explore, and treat your furry pals</p>
+            <span><a href="https://github.com/rehamej/pets-store">GitHub</a>
+            <a href="https://rehamej.github.io/pets-store/pet.store.html">View</a></span>
+        </div>
+            
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/kindergarten-site/kids.site.html"><img src="https://i.ibb.co/Zf6QFXD/Screenshot-2024-03-17-052223.png"></a>
+            <h1 style="font-weight: 700;">kindergarten website</h1>
+            <p style="margin-bottom: 10px;">A whimsical kindergarten website designed with love for convenience! 🏫🍎  Explore a world of colorful learning experiences and seamless navigation tailored for busy parents. <br> From enrollment forms to event calendars, it got everything covered with smooth transitions and user-friendly features. </p>
+            <span><a href="https://github.com/rehamej/kindergarten-site">GitHub</a>
+            <a href="https://rehamej.github.io/kindergarten-site/kids.site.html">View</a></span>
+        </div>
+
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/gaming-site/"><img src="https://i.ibb.co/PCmRsGZ/Screenshot-2024-03-17-052352.png"></a>
+            <h1 style="font-weight: 700;">Gaming site</h1>
+            <p>Its is your source for exclusive reviews, demos, updates and news on all your favorite PC games</p>
+            <span><a href="https://github.com/rehamej/gaming-site">GitHub</a>
+            <a href="https://rehamej.github.io/gaming-site/">View</a></span>
+        </div>
+
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/Far-Away-/"><img src="https://i.ibb.co/hHWz2Fm/Screenshot-2024-03-17-052439.png"></a>
+            <h1 style="font-weight: 700;">Far & Away</h1>
+            <p>Far & Away is your place for Premium Tableware</p>
+            <span><a href="https://github.com/rehamej/Far-Away-" >GitHub</a>
+            <a href="https://rehamej.github.io/Far-Away-/" >View</a></span>
+        </div>
+
+        <div class="card" class="tilt">
+            <a href="https://rehamej.github.io/RSVP-invitations-system/"><img src="https://i.ibb.co/ryDwJN8/Screenshot-2024-03-17-052729.png"></a>
+            <h1 style="font-weight: 700;">RSVP invitations system</h1>
+            <p>It's a digital invitation with an automatic RSVP feature, responsive, and works on any device for a better experience ✨ . <br>
+                Say goodbye to the hassle, and hello to seamless event planning! </p>
+            <span><a href="https://github.com/rehamej/RSVP-invitations-system"  >GitHub</a>
+                <a href="https://rehamej.github.io/RSVP-invitations-system/" >View</a></span>
+            </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="contact" id="contact">
+            <h2 class="sign"><span>Contact me</span></h2>
+
+            <div class="footer">
+
+                <div class="SECcard" style="    width: 554px;    max-width: 554px;">
+                    
+                    <div class="SECcontainer">
+
+                        <h2 style="font-size: 2.3rem;margin-bottom: 10px;">Get in touch with me</h2>
+
+                        <form id="rsvp-form">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" required>
+                
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" required>
+                
+                            <label for="rsvp">Message:</label>
+                            <textarea id="rsvp" rows="4" cols="50" required style="color: #d1d1d1;"></textarea>
+                
+                
+                
+                            <input type="submit" value="Submit">
+                        </form>
+                
+                    </div>
+                </div>
+
+                <img src="https://i.pinimg.com/originals/9c/e0/c8/9ce0c80bfb6790e39d34a2e4adbb4ea2.gif" alt=""  style="padding: 0 50px; height:400px;">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+/* Store all elements with the class 'card' in an array */
+let cardElements = document.getElementsByClassName('card');
+
+/* Iterate over each element to attach event listeners */
+for (let i = 0; i < cardElements.length; i++) {
+  let el = cardElements[i];
+  
+  /* Add event listeners to each element */
+  el.addEventListener('mousemove', handleMove);
+  el.addEventListener('mouseout', handleMouseOut);
+  el.addEventListener('mousedown', handleMouseDown);
+  el.addEventListener('mouseup', handleMouseUp);
+}
+
+/* Define the handleMove function */
+function handleMove(e) {
+  const el = e.currentTarget; // Get the element that triggered the event
+  const height = el.clientHeight;
+  const width = el.clientWidth;
+
+  const xVal = e.layerX;
+  const yVal = e.layerY;
+
+  const yRotation = 20 * ((xVal - width / 2) / width);
+  const xRotation = -20 * ((yVal - height / 2) / height);
+  const string = 'perspective(500px) scale(1.1) rotateX(' + xRotation + 'deg) rotateY(' + yRotation + 'deg)';
+
+  el.style.transform = string;
+}
+
+/* Define the handleMouseOut function */
+function handleMouseOut(e) {
+  const el = e.currentTarget;
+  el.style.transform = 'perspective(500px) scale(1) rotateX(0) rotateY(0)';
+}
+
+/* Define the handleMouseDown function */
+function handleMouseDown(e) {
+  const el = e.currentTarget;
+  el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)';
+}
+
+/* Define the handleMouseUp function */
+function handleMouseUp(e) {
+  const el = e.currentTarget;
+  el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)';
+}
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.querySelector("#rsvp-form");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.querySelector("#name").value;
+        const email = document.querySelector("#email").value;
+        const message = document.querySelector("#rsvp").value;
+
+        const emailBody = `Name: ${name}\nEmail: ${email}\nMessage: ${message}`;
+
+        window.location.href = `mailto:rehamej@hotmail.com?subject=Message&body=${encodeURIComponent(emailBody)}`;
+    });
+});
+
+// import { neonCursor } from 'https://unpkg.com/threejs-toys@0.0.8/build/threejs-toys.module.cdn.min.js'
+
+// neonCursor({
+//   el: document.getElementById('app'),
+//   shaderPoints: 16,
+//   curvePoints: 80,
+//   curveLerp: 0.5,
+//   radius1: 5,
+//   radius2: 30,
+//   velocityTreshold: 10,
+//   sleepRadiusX: 100,
+//   sleepRadiusY: 100,
+//   sleepTimeCoefX: 0.0025,
+//   sleepTimeCoefY: 0.0025
+// })
+    </script>
+</body>
+</html>
